@@ -18,15 +18,15 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\e[1m\e[32m2. Installing dependencies... \e[0m" && sleep 1
 #Install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 source "$HOME/.cargo/env"
 rustup update stable
 # packages
 sudo apt update
 sudo apt install curl -y
 sudo apt install git -y
-sudo apt-get install libssl-dev
-sudo apt-get install libclang-dev
+sudo apt-get install libssl-dev -y
+sudo apt-get install libclang-dev -y
 apt-get update \
     && apt-get install -y --no-install-recommends \
     tzdata \
