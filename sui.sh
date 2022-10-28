@@ -23,7 +23,7 @@ sudo apt-get install jq -y
 
 # download sui binaries
 version=$(wget -qO- https://api.github.com/repos/MystenLabs/sui/releases/latest | jq -r ".tag_name")
-wget "https://github.com/MystenLabs/sui/releases/download/devnet-0.13.0/sui-linux-x86_64" | sudo tar -C /usr/local/bin/ -xzf -
+wget "https://github.com/MystenLabs/sui/releases/download/devnet-0.13.0/sui-linux-x86_64 -O sui-linux-x86_64.tar.gz" | sudo tar -C /usr/local/bin/ -xzf -
 
 # download and update configs
 mkdir -p $HOME/.sui
