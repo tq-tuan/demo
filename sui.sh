@@ -40,5 +40,5 @@ git remote add upstream https://github.com/MystenLabs/sui
 git fetch upstream
 git checkout --track upstream/devnet
 cp crates/sui-config/data/fullnode-template.yaml fullnode.yaml
-wget -qO https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
+curl -fLJO https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 cargo run --release --bin sui-node -- --config-path fullnode.yaml
