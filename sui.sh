@@ -23,7 +23,7 @@ sudo apt-get install jq -y
 
 # download sui binaries
 version=$(wget -qO- https://api.github.com/repos/MystenLabs/sui/releases/latest | jq -r ".tag_name")
-wget -qO- "https://github.com/MystenLabs/sui/releases/download/${version}/sui-linux-x86_64.tar.gz" | sudo tar -C /usr/local/bin/ -xzf -
+wget -qO- "https://github.com/MystenLabs/sui/releases/download/${version}/sui-linux-x86_64" | sudo tar -C /usr/local/bin/ -xzf -
 
 # download and update configs
 mkdir -p $HOME/.sui
