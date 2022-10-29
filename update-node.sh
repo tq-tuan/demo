@@ -1,3 +1,6 @@
+cd sui
+source $HOME/.cargo/env 
+rustup update stable
 rm -r suidb genesis.blob
 git fetch upstream
 git checkout -B devnet --track upstream/devnet
